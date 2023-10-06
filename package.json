@@ -1,0 +1,35 @@
+{
+  "name": "magic-nft-demo",
+  "version": "1.0.0",
+  "description": "Magic NFT Starter Kit!",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start:backend": "cd Backend && npm start",
+    "start:frontend": "cd Frontend && npm run dev",
+    "start": "npm run start:backend & npm run start:frontend"
+  },
+  "workspaces": [
+    "contract",
+    "frontend",
+    "backend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magiclabs/magic-nft-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magiclabs/magic-nft-template/issues"
+  },
+  "homepage": "https://github.com/magiclabs/magic-nft-template#readme",
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.4"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6"
+  }
+}

@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+
+/*
+  Base styles
+*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.otf') format('truetype'); /* Adjust the path if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Bold.otf') format('truetype'); /* Adjust the path if needed */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Italic.otf') format('truetype'); /* Adjust the path if needed */
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-BoldItalic.otf') format('truetype'); /* Adjust the path if needed */
+  font-weight: bold;
+  font-style: italic;
+}
+
+@layer utilities {
+  .custom-blue {
+    backround-color: #3a4559;
+  }
+}
+  @layer utilities {
+  .custom-blue-light {
+    backround-color: #33455d;
+  }
+}
+
+.container {
+  @apply mx-auto max-w-7xl;
+}
+
+body {
+  background-color: #3a4559;
+  font-family: 'Montserrat', sans-serif;
+}
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.nft-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Adjust as needed */
+    margin-top: 2rem;
+}
+
+.nft-image-container {
+    margin-bottom: 1rem;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+
+.nft-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.nft-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Adjust as needed */
+    margin-top: 2rem;
+}
+
+.nft-image {
+    margin-bottom: 2rem;
+}
+
+
+
+
+.btn {
+  height: 50px;
+  overflow: hidden;
+  @apply rounded-[300px] px-6 py-3 text-base font-medium;
+  @apply border border-transparent;
+  @apply hover:bg-brand-purple hover:bg-opacity-95;
+  @apply bg-brand-purple text-white;
+}
+
+.btn-lg {
+  @apply btn;
+  @apply rounded-[80px] px-6 py-4 text-lg font-semibold;
+}
+
+.btn-outline {
+  @apply btn;
+  @apply border-gray-300 bg-white text-black hover:bg-opacity-10;
+}
+
+.btn-light {
+  @apply btn;
+  @apply bg-brand-purple-light text-white hover:bg-opacity-10; /* Changed text color to white */
+}
+
+.btn-neutral {
+  @apply btn;
+  @apply bg-[#F8F8FA] text-white hover:bg-[#EDEDF3]; /* Changed text color to white */
+}
+
+.badge {
+  @apply rounded-lg px-3 py-1 text-sm font-semibold uppercase tracking-wide;
+  @apply bg-custom-blue-light text-white; /* Changed text color to white */
+}
+
+.hero {
+  @apply space-y-3 text-center;
+}
+
+h1 {
+  @apply pt-6 text-6xl font-extrabold;
+  @apply text-white; /* Changed text color to white */
+  line-height: 1.2;
+}
+
+.hero p {
+  @apply mx-auto max-w-2xl pt-6;
+  @apply text-lg text-white; /* Changed text color to white */
+}
+
+p {
+  @apply text-white; /* Changed text color to white */
+  @apply text-base;
+}
+
+.flex,
+.inline-flex {
+  @apply items-center;
+}
+
+.shadow-image {
+  filter: drop-shadow(0px 1px 2px rgba(189, 189, 189, 0.3));
+}
+
+.shadow-form {
+  filter: drop-shadow(0px 12px 56px rgba(119, 118, 122, 0.15));
+}
+
+/* When last, this ensures inline styles take priority */
+@tailwind utilities;
